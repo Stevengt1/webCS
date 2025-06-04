@@ -1,0 +1,14 @@
+/* El * indica que todos los elementos se veran afectados */
+*{ 
+    color:orangered;
+}
+
+/* En este caso todos los h1 se veran afectados porque hicimos un selector por tipo de etiqueta */
+h1{
+    color:black;
+    text-align: center;
+}
+/* Todas las clases inician con un . y luego su nombre, claramente la etiqueta tendra que tener "class="boxes" para poder aplicarle el estilo" */
+.boxes{
+    border-color: blue;
+}
