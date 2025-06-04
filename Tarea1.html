@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kimchi Tradicional</title>
+    <link rel="stylesheet" href="Styles/tareastyles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-primary">
+            <!-- navbar: activa estilos de barra de navegacion
+                 navbar-expand-lg: la barra se expande en pantallas grandes, pero colapsa con el icono de hamburguesas en patallas pequeñas
+                 bg-body-tertiary: Aplica el color terciario al bootstrap-->
+            <div class="container-fluid"> <!--El contenido se ajusta al tamaño de la pantalla-->
+                <a class="navbar-brand" href="#">Clase Web</a> <!--navbar-brand especifica el Logo de sitio-->
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <aside>
+            <nav>
+                <a class="nav-link" href="#imagenes">Im&aacute;genes</a>
+                <a class="nav-link" href="#ingredientes">Ingredientes</a>
+                <a class="nav-link" href="#preparacion">Preparaci&oacute;n</a>
+                <a class="nav-link" href="#video">Video</a>
+            </nav>
+        </aside>
+        <main>
+            <section id="imagenes">
+                <h1>Imagenes</h1>
+                <h2>Ingredientes generales</h2>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXjPkTZUTCFRVDoteP60WkizENbF8KCdNRmg&s"
+                    alt="Ingredientes generales" height="300" width="300">
+                <h2>Platillo terminado</h2>
+                <img src="https://cdn0.recetasgratis.net/es/posts/6/7/7/kimchi_coreano_tradicional_60776_600.webp"
+                    alt="Platillo terminado" height="300" width="300">
+            </section>
+            <section id="ingredientes">
+                <h1>Ingredientes</h1>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ingrediente1">
+                    <label class="form-check-label" for="ingrediente1">1 Col China</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ingrediente2">
+                    <label class="form-check-label" for="ingrediente2">10 gramos de harina de arroz</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ingrediente3">
+                    <label class="form-check-label" for="ingrediente3">4 dientes de ajo</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ingrediente4">
+                    <label class="form-check-label" for="ingrediente4">1 trozo de jengibre</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ingrediente5">
+                    <label class="form-check-label" for="ingrediente5">2 cucharadas soperas de az&uacute;car</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ingrediente6">
+                    <label class="form-check-label" for="ingrediente6">2 litros de agua</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ingrediente7">
+                    <label class="form-check-label" for="ingrediente7">3 cucharadas soperas de pasta de soja</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ingrediente8">
+                    <label class="form-check-label" for="ingrediente8">250 gramos de sal gorda</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ingrediente9">
+                    <label class="form-check-label" for="ingrediente9">4 cucharadas soperas de salsa de concentrado
+                        de pescado</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ingrediente10">
+                    <label class="form-check-label" for="ingrediente10">1 cucharada sopera de piment&oacute;n
+                        picante
+                        o chile en polvo</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ingrediente11">
+                    <label class="form-check-label" for="ingrediente11">1 cucharadita de semillas de de
+                        s&eacute;samo
+                        en grano</label>
+                </div>
+                <!--Form-check: Mejora la salida y el comportamiento de los elementos HTML. Además de que mantiene una consistencia entre los navegadores-->
+                <!--El "for" vincula la etiqueta "label" con el "id"-->
+                <!--El form-check-label facilita la estilizacion de los elementos porque se basa en el estado del "input"-->
+            </section>
+            <section id="preparacion">
+                <h1>Preparaci&oacute;n</h1>
+                <h2 id="Paso 1">Paso 1</h2>
+                <p>
+                    Lo primero que tenemos que hacer para preparar este kimchi coreano es <strong> separar las hojas
+                        del tallo de la col</strong> china,
+                    <strong> cortarlas en trozos</strong> y cortar el tallo también en trozo grandes.
+                </p>
+
+                <h2 id="Paso 2">Paso 2</h2>
+                <p>
+                    Seguidamente, en un recipiente grande <strong> añadimos agua y sal gorda</strong>,
+                    lo mezclamos bien para que se disuelva la sal y así obtener una salmuera.
+                    Ahora metemos la col china cortada y la dejamos en esta <strong> salmuera durante unas 12
+                        horas</strong> aproximadamente.
+                </p>
+
+                <h2 id="Paso 3">Paso 3</h2>
+                <p>
+                    Por otro lado,<strong> preparamos la salsa coreana picante</strong>.
+                    Para ello,<strong> pelamos el trozo de jengibre</strong> y lo metemos en un mortero junto con
+                    los ajos también pelados,
+                    y lo machacamos todo junto hasta obtener una pasta de ajo y jengibre.
+                </p>
+
+                <h2 id="Paso 4">Paso 4</h2>
+                <p>
+                    A continuación,<strong> mezclamos la harina de arroz con el chile en polvo o pimentón
+                        picante</strong>,
+                    agregamos un poco de agua fría y removemos bien hasta conseguir una<strong> especie de
+                        escabeche</strong> para el kimchi coreano.
+                    Entonces agregamos la pasta de ajos y jengibre, la pasta de soja, la salsa de concentrado de
+                    pescado,
+                    las semillas de sésamo y el azúcar, y mezclamos todo bien de nuevo. Guardamos este adobo en la
+                    nevera.
+                </p>
+
+                <h2id="Paso 5">Paso 5</h2>
+                    <p>
+                        Cuando haya reposado todas las horas correspondientes la col china en la salmuera, la escurrimos
+                        bien y la metemos en la preparación anterior,
+                        removiendo y dejando que se empape bien. Entonces vertemos todo el kimchi coreano en un
+                        recipiente, frasco o bote con tapa hermético o un tupper,
+                        y<strong> dejamos que fermente en la nevera</strong> mínimo unos 8 días para que tenga ese sabor
+                        ácido,
+                        salado y picante característico, aunque también puedes comértelo unos días antes pero aún no
+                        tendrá ese sabor tan notable.
+                    </p>
+
+                    <h2 id="Paso 6">Paso 6</h2>
+                    <p>
+                        Una vez tengas el kimchi coreano fermentado al gusto,<strong> puedes guardarlo en la nevera
+                            durante meses</strong> ya que aguantará perfectamente,
+                        y usarlo cuando más te convenga.
+                    </p>
+            </section>
+            <section id="video">
+                <h1>Video</h1>
+                <h2>Preparaci&oacute;n del Kimchi</h2>
+                <iframe width="700" height="500" src="https://www.youtube.com/embed/m79GEVJbWHc"
+                    title="Cómo hacer KIMCHI Coreano en Casa (paso a paso) | Cocina con Coqui" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
