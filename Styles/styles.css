@@ -49,9 +49,3 @@ label {
     color: #1A237E;
     font-size: 14px;
 }
-
-/*Preguntas para el profe
-    Por que el border-collapse no puede estar en una misma linea que el border, pero el border-style y border-color si?
-    Diferencia entre el hijo directo y hermano general porque el hijo directo dice que todos los <p> que esten dentro de <h> tendran x cosa
-    y el hermano general dice que todos los <p> hermanos que esten en <h> tendran x cosa
-*/
