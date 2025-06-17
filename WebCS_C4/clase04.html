@@ -23,7 +23,9 @@
                 <form>
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre completo</label>
+                        <!--Se usa form-label para crear un campo de entrada en el formulario-->
                         <input type="text" class="form-control" id="nombre" placeholder="Juan P&eacute;rez">
+                        <!--Se usa el form-control porque son elementos que permiten al usuario interactuar con el navegador-->
                     </div>
 
                     <div class="mb-3">
@@ -34,23 +36,27 @@
                     <div class="mb-3">
                         <label for="pais" class="form-label">Pa&iacute;s</label>
                         <select class="form-select" id="pais">
+                        <!--El Select se usa para crear una lista para el usuario, junto con su clase específica que es form-select-->
                             <option selected>Seleccione un pa&iacute;s</option>
                             <option>Costa Rica</option>
                             <option>Panam&aacute;</option>
                             <option>Nicaragua</option>
                             <option>Guatemala</option>
+                            <!--Option ayuda a generar las opciones para el usuario-->
                         </select>
                     </div>
 
                     <div class="mb-3">
                         <input type="checkbox" class="form-check-input" value="" id="suscribirse" checked>
-                        <label for="suscribirse" class="form-label">Deseo suscribirme para recibir
-                            informaci&oacute;n</label>
+                        <!--El value no tiene un valor porque el campo se encuentra vacio por lo que no se enviara ninguna informacion-->
+                        <label for="suscribirse" class="form-label">Deseo suscribirme para recibir informaci&oacute;n</label>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label d-block">Género</label>
                         <div class="form-check form-check-inline">
+                            <!--form-check form-check-inline se usa para que en una misma fila hayan tres opciones
+                            Si se usara form-check-input, las opciones se juntarian en un solo espacio-->
                             <input class="form-check-input" type="radio" name="genero" id="femenino" value="femenino">
                             <label class="form-check-label" for="femenino">Femenino</label>
                         </div>
