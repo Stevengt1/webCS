@@ -1,0 +1,56 @@
+*{
+    font-family: Arial;
+}
+
+.navbar {
+    background-color: #FCEF91;
+}
+
+aside {
+    padding: 5px;
+}
+
+nav>a {
+    display: flex;
+    justify-content: flex-start;
+    width: 300px;
+    background-color: white;
+}
+
+a {
+    margin-bottom: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 5px;
+    height: 100vh;
+}
+
+section{
+    border: 3px solid black;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 10px;
+}
+
+strong{
+    color: #EA2F14;
+}
+
+h1, h2{
+    color: #FB9E3A !important;
+    text-align: center;
+}
+
+img, iframe{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+[id*="Paso"]{
+    color: #E6521F;
+}
+
