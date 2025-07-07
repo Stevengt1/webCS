@@ -76,11 +76,27 @@
     echo "<section>";
     foreach ($arr_notas as $nota) {
         $contador ++;
-        if ($nota >= 60) {
+        if ($nota >= 70) {
             echo "<p>Nota $contador aprobada: $nota</p>";
         } else {
             echo "<p>Nota $contador reprobada: $nota</p>";
         }
+    }
+    echo "</section>";
+    echo "<h2>Operadores lógicos</h2>";
+    echo "<section>";
+    if($nota1 < 70 || $nota2 < 70 || $nota3 < 70 || $nota4 < 70) {
+        echo "<p>Al menos una de tus notas está reprobada (menor a 70).</p>";
+    } else {
+        echo "<p>¡Felicidades! Todas tus notas son aprobadas.</p>";
+    }
+    echo "</section>";
+
+    echo "<section>";
+    if(!$aprobado) {
+        echo "<p>Lo siento. Debes repetir el curso</p>";
+    } else {
+        echo "<p>¡Felicidades! Te veo en el siguiente curso</p>";
     }
     echo "</section>";
     ?>
