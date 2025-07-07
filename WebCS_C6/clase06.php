@@ -85,6 +85,13 @@
     echo "</section>";
     echo "<h2>Operadores lógicos</h2>";
     echo "<section>";
+    if( $nota1 >= 70 && $nota2 >= 70 && $nota3 >= 70 && $nota4 >= 70) {
+        echo "<p>¡Felicidades! Todas tus notas son aprobadas.</p>";
+    } else {
+        echo "<p>Algunas de tus notas son reprobada.</p>";
+    }
+    echo "</section>";
+    echo "<section>";
     if($nota1 < 70 || $nota2 < 70 || $nota3 < 70 || $nota4 < 70) {
         echo "<p>Al menos una de tus notas está reprobada (menor a 70).</p>";
     } else {
