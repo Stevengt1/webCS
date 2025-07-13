@@ -48,7 +48,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="card p-4 shadow-lg w-100" style="max-width: 400px">
             <h3 class="card-title text-center mb-4">Información de usuario</h3>
-            <form>
+            <form id="registro" method="post">
+                <!-- Hace una carga, luego de que se realiza un evento que en este caso es con el boton de tipo submit-->
+                <!-- GET: Se envian los datos en la URL (Que aparecen en la URL), se usa cuando la operacion no modifica datos y no es apta para datos sensibles
+                     POST: Se envian los datos en el cuerpo de la peticion (NO aparece en la URL), modifica los datos del server y es mas seguro para datos sensibles -->
                 <div class=input-group mb-3">
                     <label class="form-label" for="nombre" required>Nombre Completo </label>
                     <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Pedro">
@@ -72,7 +75,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <button type="submit" class="btn btn-primary btn-block">Registrar</button>
             </form>
         </div>
-
+        
         <!-- ID: cliente(CSS, JS) Name para el server(PHP)-->
     </div>
 </body>
