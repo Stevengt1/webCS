@@ -4,11 +4,11 @@ session_start();
 require_once("conexion.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = $_POST['nombre'];
-    $fecha_nam = $_POST['fechanam'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $confirm = $_POST['pass_confirm'];
+    $nombre = $_POST['nombre'] ?? '';
+    $fecha_nam = $_POST['fechanam'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $password = $_POST['password'] ?? '';
+    $confirm = $_POST['pass_confirm'] ?? '';
 
     //Validar datos
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
