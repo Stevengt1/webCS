@@ -1,3 +1,4 @@
+/*
 CREATE DATABASE IF NOT EXISTS gestion_reservaciones;
 USE gestion_reservaciones;
 
@@ -8,3 +9,4 @@ fecha DATETIME NOT NULL,
 num_personas INT NOT NULL,
 clave VARCHAR(32) NOT NULL
 );
+/*
