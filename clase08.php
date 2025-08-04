@@ -1,19 +1,19 @@
-<?php 
+<?php
 session_start();
 
 require_once("conexion.php");
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = $_POST['nombre'] ?? '';
-    $fecha_nam = $_POST['fechanam'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $password = $_POST['password'] ?? '';
-    $confirm = $_POST['pass_confirm'] ?? '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = $_POST['nombre'];
+    $fecha_nam = $_POST['fechanam'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $confirm = $_POST['pass_confirm'];
 
     //Validar datos
-    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "<div class='alert alert-danger'>Correo invalido</div>";
-    }elseif($password !== $confirm) {
+    } elseif ($password !== $confirm) {
         echo "<div class='alert alert-danger'>Contraseñas no coinciden</div>";
     } else {
         $_SESSION['nombre'] = $nombre;
@@ -21,18 +21,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $stmt = $mysqli->prepare("insert into usuarios (Nombre,Email,Fecha_Nacimiento,Contrasenia) Values (?,?,?,?)");
 
-        $hash = password_hash($password,PASSWORD_DEFAULT);
+        $hash = password_hash($password, PASSWORD_DEFAULT);
 
         //s= string i=integer d=double/decmal b=blob (binario)
-        $stmt->bind_param("ssss",$nombre,$email,$fecha_nam,$hash);
+        $stmt->bind_param("ssss", $nombre, $email, $fecha_nam, $hash);
         $stmt->execute();
 
-        if( $stmt->sqlstate == '00000'){
+        if ($stmt->sqlstate == '00000') {
             echo "<div class='alert alert-success'>Usuario registrado correctamente</div>";
-        }elseif ($stmt->sqlstate > 0){
-             echo "<div class='alert alert-warning'>Advertencia al insertar " .$stmt->sqlstate. "</div>";
-        }else {
-            echo "<div class='alert alert-danger'>Error al insertar " .$stmt->sqlstate. "</div>";
+        } elseif ($stmt->sqlstate > 0) {
+            echo "<div class='alert alert-warning'>Advertencia al insertar " . $stmt->sqlstate . "</div>";
+        } else {
+            echo "<div class='alert alert-danger'>Error al insertar " . $stmt->sqlstate . "</div>";
         }
         $stmt->close();
         $mysqli->close();
@@ -41,6 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,8 +49,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <title>Formulario con post</title>
 </head>
+
 <body class="bg-light">
-   <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="card p-4 shadow-lg w-100" style="max-width: 400px">
             <h3 class="card-title text-center mb-4">Información de usuario</h3>
             <form id="registro" method="post">
@@ -74,10 +76,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="password" class="form-control" id="pass_confirm" name="pass_confirm" required>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Registrar</button>
-            </form> 
+            </form>
         </div>
-       
+
 </body>
+
 </html>
 <!-- El ID se usa para metodos de CSS o JS para alguna función o buscar algún dato (trabaja del lado del cliente) mientras que 
   Name trabaja para el server(PHP)-->
