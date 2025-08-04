@@ -17,25 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<div class='alert alert-danger'>Contraseñas no coinciden</div>";
     } else {
         $_SESSION['nombre'] = $nombre;
+        $_SESSION['fecha_nam'] = $fecha_nam;
         $_SESSION['email'] = $email;
+        $_SESSION['password'] = $password;
 
-        $stmt = $mysqli->prepare("insert into usuarios (Nombre,Email,Fecha_Nacimiento,Contrasenia) Values (?,?,?,?)");
-
-        $hash = password_hash($password, PASSWORD_DEFAULT);
-
-        //s= string i=integer d=double/decmal b=blob (binario)
-        $stmt->bind_param("ssss", $nombre, $email, $fecha_nam, $hash);
-        $stmt->execute();
-
-        if ($stmt->sqlstate == '00000') {
-            echo "<div class='alert alert-success'>Usuario registrado correctamente</div>";
-        } elseif ($stmt->sqlstate > 0) {
-            echo "<div class='alert alert-warning'>Advertencia al insertar " . $stmt->sqlstate . "</div>";
-        } else {
-            echo "<div class='alert alert-danger'>Error al insertar " . $stmt->sqlstate . "</div>";
-        }
-        $stmt->close();
-        $mysqli->close();
+        print_r($_SESSION); DIE;
     }
 }
 ?>
