@@ -153,14 +153,12 @@ if (!isset($_SESSION['nombre'])) {
                                 <td><?= htmlspecialchars($usuario['Fecha_Nacimiento']) ?></td>
                                 <td><?= htmlspecialchars($usuario['Email']) ?></td>
                                 <td>
-                                    <a href="#"
-                                        data-id="<?= $usuario['Id_usuario'] ?>"
-                                        data-nombre="<?= $usuario['Nombre'] ?>"
-                                        data-fecha="<?= $usuario['Fecha_Nacimiento'] ?>"
-                                        data-email="<?= $usuario['Email'] ?>"
-                                        data-bs-toggle='modal'
-                                        data-bs-target="#usuarioModal"
-                                        class="btn btn-warning btn-sm btnEditar">Editar</a>
+                                        <a href="#"
+                                            data-id="<?= $usuario['Id_usuario'] ?>"
+                                            data-nombre="<?= $usuario['Nombre'] ?>"
+                                            data-fecha="<?= $usuario['Fecha_Nacimiento'] ?>"
+                                            data-email="<?= $usuario['Email'] ?>"
+                                            class="btn btn-warning btn-sm btnEditar">Editar</a>
                                     <a href="?eliminar=<?= $usuario['Id_usuario'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Está seguro de eliminar este usuario?')">Eliminar</a>
                                 </td>
                             </tr>
